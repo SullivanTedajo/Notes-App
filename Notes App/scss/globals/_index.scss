@@ -1,0 +1,66 @@
+@forward 'boilerplate';
+@forward 'colors';
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5% 15%;
+    background: linear-gradient(135deg, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.notes {
+    width: 100%;
+    color: var(--color-text-light);
+
+    &__title{
+        display: flex;
+        gap: .3em;
+        text-transform: capitalize;
+        font-size: 2.4em;
+        // margin-bottom: .8em;
+    }
+
+    &__create-button{
+        display: flex;
+        gap: .3em;
+        text-transform: capitalize;
+        font-size: 1em;
+        background: linear-gradient(to top, hsl(270, 68%, 39%), hsl(270, 68%, 60%));
+        color: var(--color-text-light);
+        border: none;
+        border-radius: 1.5em;
+        padding: .8em;
+        margin-block: 1.5em;
+        cursor: pointer;
+    }
+
+    &__items-list{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(1fr, 50px));
+        gap: 0;
+        
+    }
+
+    &__item{
+        width: 35%;
+        border-radius: .5em;
+        background-color: var(--color-bg-light);
+        color: var(--color-text);
+        padding: .8em;
+        margin: 0 .8em .8em 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+    }
+    
+    &__control{
+        border: none;
+        resize: none;
+        font-size: 1em;
+    }
+
+    &__delete-icon{
+        align-self: flex-end;
+        cursor: pointer;
+    }
+}
